@@ -1,0 +1,147 @@
+:root {
+  --primary-color: #3498db;
+}
+
+body { font-family: 'Segoe UI', Roboto, sans-serif; background-color: #f8faff; }
+
+.sidebar { width: 250px; height: 100vh; position: sticky; top: 0; }
+
+.logo-placeholder {
+  background: #f39c12;
+  color: white;
+  width: 100px;
+  padding: 8px;
+  border-radius: 20px;
+  font-weight: bold;
+}
+
+.form-control, .form-select {
+  border-color: #dee2e6;
+  border-radius: 8px;
+  padding: 0.6rem;
+}
+
+.upload-box {
+  width: 120px;
+  height: 120px;
+  background-color: #fff;
+  cursor: pointer;
+  position: relative;
+}
+
+.plus-icon {
+  position: absolute;
+  color: #ced4da;
+  bottom: 40px;
+  right: 40px;
+}
+
+.category-card {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.2s;
+}
+
+.bg-light-blue { background-color: #ebf5ff; }
+
+.custom-switch .form-check-input {
+  width: 3rem;
+  height: 1.5rem;
+  cursor: pointer;
+}
+
+.custom-switch .form-check-input:checked {
+  background-color: #e74c3c;
+  border-color: #e74c3c;
+}
+
+.cursor-pointer { cursor: pointer; }
+
+/* Sidebar sizing */
+.sidebar {
+  width: 250px;
+  min-width: 250px;
+  height: 100vh;
+  position: sticky;
+  top: 0;
+}
+
+/* Mobile Sidebar logic */
+.mobile-sidebar {
+  position: fixed;
+  top: 0;
+  left: -260px; /* Hidden by default */
+  width: 250px;
+  height: 100vh;
+  z-index: 1050;
+  transition: 0.3s ease-in-out;
+  box-shadow: 5px 0 15px rgba(0,0,0,0.1);
+}
+
+.mobile-sidebar.show {
+  left: 0; /* Slide in */
+}
+
+.sidebar-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0,0,0,0.4);
+  z-index: 1040;
+}
+
+/* Make sure main content fills screen on mobile */
+.main-content {
+  overflow-x: hidden;
+}
+
+/* Ensure the form rows look good on mobile */
+@media (max-width: 768px) {
+  .logo-placeholder { width: 80px; font-size: 14px; }
+}
+
+/* Previous styles remain same */
+.logo-placeholder { background: #f39c12; color: white; width: 100px; padding: 8px; border-radius: 20px; font-weight: bold; }
+.cursor-pointer { cursor: pointer; }
+.bg-light-blue { background-color: #ebf5ff; }
+.category-card { width: 90px; height: 90px; flex-shrink: 0; border: 1px solid #dee2e6; border-radius: 12px; display: flex; flex-direction: column; align-items: center; justify-content: center; background: white; }
+.category-card.border-primary { border-width: 2px !important; }
+
+
+/* The specific Blue from your image */
+.bg-active-blue {
+  background-color: #064aa3 !important; /* Vibrant blue */
+}
+
+.nav-item {
+  transition: all 0.2s ease-in-out;
+  margin: 0 4px; /* Slight horizontal spacing for the pill effect */
+}
+
+/* Rounded corners to match the image */
+.rounded-3 {
+  border-radius: 10px !important;
+}
+
+/* Hover effect for items that aren't active */
+.hover-item:hover {
+  background-color: #0b50b1;
+  color: white !important;
+}
+
+/* Ensure icons and text align perfectly */
+.nav-item span {
+  display: flex;
+  align-items: center;
+}
+
+.transition-all {
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
